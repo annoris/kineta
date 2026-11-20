@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 132" role="img" aria-label="No Fluff. Pure Flavor. Sticker">
+  <defs>
+    <filter id="stickerShadow4" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#111111" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#stickerShadow4)">
+    <!-- White die-cut base -->
+    <rect x="10" y="16" width="220" height="100" rx="28" fill="#FFFFFF"/>
+    <!-- Coral Vermilion badge -->
+    <rect x="17" y="23" width="206" height="86" rx="22" fill="#FF3B1F" stroke="#111111" stroke-width="3"/>
+    <!-- Stylized expressive hand / peace-spark icon -->
+    <g transform="translate(30, 34)" fill="#D8FF00" stroke="#111111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Palm -->
+      <path d="M12 34 C10 24, 14 19, 21 19 H32 C38 19, 41 25, 39 34 L36 48 C34 54, 29 57, 23 57 C16 57, 13 52, 12 44 Z"/>
+      <!-- Raised fingers -->
+      <path d="M17 21 L14 6 C14 2, 20 1, 21 6 L24 20"/>
+      <path d="M26 20 L29 4 C30 0, 36 1, 35 6 L32 21"/>
+      <!-- Thumb -->
+      <path d="M12 33 L5 27 C2 24, 5 19, 9 22 L15 27"/>
+    </g>
+    <!-- Copy -->
+    <text x="86" y="59" font-family="'Roboto Flex', 'Arial Narrow', Impact, sans-serif" font-weight="900" font-size="21" letter-spacing="0.6" fill="#111111">NO FLUFF.</text>
+    <text x="86" y="86" font-family="'Fraunces', Georgia, serif" font-weight="800" font-style="italic" font-size="20" fill="#D8FF00" stroke="#111111" stroke-width="0.9">PURE FLAVOR.</text>
+  </g>
+</svg>

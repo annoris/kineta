@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="This is how we scroll — Kineta">
+  <defs>
+    <path id="scrollBadgeRing" d="M 54,54 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+  </defs>
+  <!-- Acid Chartreuse circular stamp -->
+  <circle cx="54" cy="54" r="52" fill="#D8FF00" stroke="#111111" stroke-width="2"/>
+  <circle cx="54" cy="54" r="26" fill="none" stroke="#111111" stroke-width="1.5"/>
+
+  <!-- Circular typography -->
+  <text font-family="'Roboto Flex', 'Inter', sans-serif" font-weight="800" font-size="8.6" letter-spacing="1.45" fill="#111111">
+    <textPath href="#scrollBadgeRing" startOffset="0%">THIS IS HOW WE SCROLL • KINETA • </textPath>
+  </text>
+
+  <!-- Crisp center globe icon -->
+  <g fill="none" stroke="#111111" stroke-width="1.6" stroke-linecap="round">
+    <circle cx="54" cy="54" r="15"/>
+    <ellipse cx="54" cy="54" rx="7.5" ry="15"/>
+    <line x1="39" y1="54" x2="69" y2="54"/>
+    <path d="M42 46 C47 48.5, 61 48.5, 66 46"/>
+    <path d="M42 62 C47 59.5, 61 59.5, 66 62"/>
+  </g>
+</svg>

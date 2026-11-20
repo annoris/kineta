@@ -1,0 +1,1092 @@
+/* ==========================================================================
+   SECTIONS.CSS — Exact 1-to-1 Extrafazant Layout & Proportions
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SECTION 1: HERO (.section_hero)
+   -------------------------------------------------------------------------- */
+
+.section_hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg-light);
+}
+
+.hero_wrapper.is-home {
+  min-height: 100vh;
+  padding-bottom: 4em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero_content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero_subtitle {
+  max-width: 24em;
+}
+
+/* Cursor-Activated Editorial Card */
+.cursor-card.is-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24em;
+  aspect-ratio: 4 / 5;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s var(--ease-out-expo), visibility 0.3s ease;
+}
+
+.cursor-card.is-home.on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cursor-card_media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-bg, var(--color-accent));
+  padding: 0.75em;
+  border-radius: var(--radius-none);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cursor-card_media.is-active {
+  opacity: 1;
+}
+
+.cursor-card_media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .cursor-card.is-home {
+    position: relative;
+    top: auto;
+    left: auto;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    width: 100%;
+    max-width: 24em;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 1.5em;
+  }
+
+  .cursor-card_media {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cursor-card_media:first-child {
+    opacity: 1;
+  }
+}
+
+/* Hero Stockists Marquee — Pure GPU Infinite Scroll */
+.hero_clients {
+  position: absolute;
+  inset: auto 0% 0%;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  z-index: 2;
+}
+
+.marquee-advanced {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-advanced__scroll,
+.marquee-advanced__track,
+.hero_clients-marquee {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-advanced__collection,
+.marquee-advanced__list,
+.hero_clients-track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee-advanced__item-width,
+.hero_client-item {
+  width: 11em;
+  height: 11em;
+  margin-inline: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.marquee-advanced__item-width svg,
+.hero_client-item svg {
+  width: 100%;
+  height: auto;
+  max-height: 3.2em;
+  color: var(--color-accent);
+}
+
+@media screen and (max-width: 767px) {
+  .hero_wrapper.is-home {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+
+  .marquee-advanced__item-width,
+  .hero_client-item {
+    width: 8.5em;
+    height: 6em;
+    margin-inline: 1.5em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: INTRO / ABOUT (.section_intro#intro)
+   -------------------------------------------------------------------------- */
+
+.section_intro {
+  position: relative;
+  background-color: var(--color-bg-light);
+  contain: layout style;
+}
+
+.intro_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding-bottom: 4em;
+  width: 100%;
+  align-items: center;
+}
+
+.intro_col.is-media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 4em;
+  position: relative;
+}
+
+.intro-media {
+  position: relative;
+  width: 100%;
+  max-width: 52em;
+}
+
+.intro-media-l {
+  width: 35em;
+  aspect-ratio: 4 / 5;
+  position: relative;
+  transform: rotate(-3deg);
+}
+
+.intro-media-l_card {
+  background-color: var(--color-white);
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-none);
+}
+
+.intro-media-l_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-media-m {
+  width: 23.75em;
+  aspect-ratio: 4 / 5;
+  position: absolute;
+  inset: auto 0% -4em auto;
+  z-index: 1;
+  transform: rotate(4deg);
+}
+
+.intro-media-m_card {
+  background-color: var(--color-white);
+  padding: 1em 1em 4em;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-none);
+}
+
+.intro-media-m_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-media-s {
+  width: 20em;
+  position: absolute;
+  inset: 10em 10em auto auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.intro-media-s img,
+.intro-media-s svg {
+  width: 100%;
+  height: auto;
+}
+
+.intro_col:not(.is-media) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+  max-width: 48em;
+}
+
+@media screen and (max-width: 991px) {
+  .intro_wrapper {
+    grid-template-columns: 1fr;
+    gap: 5.5em;
+    padding-bottom: 2em;
+  }
+
+  .intro_col.is-media {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .intro-media {
+    max-width: 36em;
+  }
+
+  .intro-media-l {
+    width: 24em;
+  }
+
+  .intro-media-m {
+    width: 16em;
+    inset: auto 0% -3em auto;
+  }
+
+  .intro-media-s {
+    width: 12em;
+    inset: 6em 4em auto auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .intro-media-l {
+    width: 18em;
+  }
+
+  .intro-media-m {
+    width: 12.5em;
+    inset: auto 0% -2em auto;
+  }
+
+  .intro-media-s {
+    width: 9em;
+    inset: 4em 2em auto auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: FEATURED DARK STACK (.section_featured.theme-dark#ediciones)
+   NOTE: NEVER apply contain: layout style here (breaks ScrollTrigger pin!)
+   -------------------------------------------------------------------------- */
+
+.section_featured {
+  position: relative;
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+}
+
+.featured_pin {
+  height: 100svh;
+  padding: 8em 0 2em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: clip;
+  position: relative;
+}
+
+.featured_title {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  position: relative;
+  z-index: 2;
+}
+
+.featured_subtitle {
+  max-width: 28em;
+  color: var(--color-ink-on-dark-muted);
+}
+
+.featured_collection {
+  width: 100%;
+}
+
+.featured_list {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  position: relative;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.featured_slide {
+  width: 80vh;
+  max-width: 90vw;
+  aspect-ratio: 1.75;
+  position: absolute;
+  top: calc(50% - 22.8vh);
+  left: 50%;
+  margin-left: -40vh;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Signature Palette Accents for Featured Cards 1, 2, 3 */
+.featured_slide:nth-child(1) .featured-card {
+  --card-accent: var(--color-lime);
+}
+
+.featured_slide:nth-child(2) .featured-card {
+  --card-accent: var(--color-accent);
+}
+
+.featured_slide:nth-child(3) .featured-card {
+  --card-accent: var(--color-coral);
+}
+
+.featured-card {
+  width: 100%;
+  height: 100%;
+  padding: 1.75vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: var(--card-accent, var(--color-lime));
+  border-radius: var(--radius-none);
+  cursor: pointer;
+}
+
+.featured-card_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #181818;
+}
+
+.featured-card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.featured-card:hover .featured-card_img img {
+  transform: scale(1.04);
+}
+
+.featured-card_img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 17, 17, 0.56) 0%,
+    rgba(17, 17, 17, 0.08) 45%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.featured-card_title {
+  position: absolute;
+  bottom: 2.5em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+  padding-inline: 1em;
+}
+
+.featured-card_h {
+  font-family: var(--font-display);
+  font-size: 8vh;
+  line-height: 0.8em;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-variation-settings: 'wght' 700, 'wdth' 75, 'opsz' 30;
+}
+
+.featured_btn {
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.featured_scroll-svg {
+  width: 9em;
+  height: 9em;
+  position: absolute;
+  inset: auto 3em 3em auto;
+  animation: slowSpin 18s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.featured_scroll-svg img,
+.featured_scroll-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .featured_slide {
+    width: 88vw;
+    margin-left: -44vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .featured-card_h {
+    font-size: 5.5vh;
+  }
+
+  .featured_scroll-svg {
+    width: 6.5em;
+    height: 6.5em;
+    inset: auto 1.5em 1.5em auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .featured_pin {
+    padding: 6em 0 2em;
+  }
+
+  .featured_list {
+    height: 44vh;
+  }
+
+  .featured-card_h {
+    font-size: 4.2vh;
+  }
+
+  .featured_scroll-svg {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: SERVICES / FLAVORS (.section_services#sabores)
+   -------------------------------------------------------------------------- */
+
+.section_services {
+  position: relative;
+  background-color: var(--color-bg-light);
+  contain: layout style;
+}
+
+.services_wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.services_title {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75em;
+}
+
+.services-cards_list {
+  display: flex;
+  gap: 0;
+  transform: scale(0.9);
+  justify-content: center;
+  align-items: stretch;
+}
+
+.services-cards_item {
+  flex-shrink: 0;
+}
+
+.services-card {
+  width: 28em;
+  height: 100%;
+  border-radius: var(--radius-none);
+  cursor: pointer;
+  transition: transform 0.5s var(--ease-spring);
+}
+
+/* Signature Palette for Service Cards 1, 2, 3 */
+.services-cards_item:nth-child(1) .services-card_wrap {
+  background-color: var(--color-accent);
+}
+
+.services-cards_item:nth-child(2) .services-card_wrap {
+  background-color: var(--color-lavender);
+}
+
+.services-cards_item:nth-child(3) .services-card_wrap {
+  background-color: var(--color-coral);
+}
+
+.services-card_wrap {
+  padding: 1.5em;
+  gap: 1em;
+  display: flex;
+  flex-flow: column;
+  color: var(--color-white);
+  height: 100%;
+  border-radius: var(--radius-none);
+}
+
+.services-card_media {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(17, 17, 17, 0.14);
+}
+
+.services-card_media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+[data-video-on-hover='active'] .services-card_media img,
+.services-card:hover .services-card_media img {
+  transform: scale(1.07);
+}
+
+.services-card_content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5em;
+}
+
+@media screen and (min-width: 992px) {
+  .services-cards_item:nth-child(1) .services-card {
+    transform: translateY(4em) rotate(-4deg);
+  }
+
+  .services-cards_item:nth-child(2) .services-card {
+    transform: rotate(0deg);
+    z-index: 2;
+    position: relative;
+  }
+
+  .services-cards_item:nth-child(3) .services-card {
+    transform: translateY(3em) rotate(5deg);
+  }
+}
+
+.services_btn {
+  margin-top: 2em;
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 991px) {
+  .services-cards_list {
+    flex-wrap: wrap;
+    gap: 1.5em;
+    transform: none;
+    width: 100%;
+  }
+
+  .services-cards_item {
+    width: calc(50% - 0.75em);
+  }
+
+  .services-card {
+    width: 100%;
+  }
+
+  .services_btn {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .services-cards_item {
+    width: 100%;
+    max-width: 26em;
+  }
+
+  .services_btn {
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 5: TEAM (.section_team#equipo) — Exact 4-Col Asymmetric Grid
+   -------------------------------------------------------------------------- */
+
+.section_team {
+  position: relative;
+  background-color: var(--color-bg-light);
+  contain: layout style;
+}
+
+.team_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.team_title {
+  position: absolute;
+  inset: 12em auto auto 0%;
+  width: 70%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.team_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  align-items: start;
+}
+
+/* Borderless Full-Bleed Portrait — ZERO Frame, ZERO Shadow, ZERO Caption */
+.team_card {
+  width: 34em;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-none);
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+}
+
+.team_img {
+  width: 100%;
+  height: 100%;
+}
+
+.team_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Desktop Exact 6 Asymmetric Placements */
+@media screen and (min-width: 992px) {
+  .team_item:nth-child(1) {
+    grid-row: 1;
+    grid-column: 3;
+    transform: translateX(16em);
+  }
+
+  .team_item:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+    transform: translateY(-8em) translateX(8em);
+  }
+
+  .team_item:nth-child(3) {
+    grid-row: 2;
+    grid-column: 3;
+    margin-top: 8em;
+    margin-bottom: -8em;
+    transform: translateY(8em);
+  }
+
+  .team_item:nth-child(4) {
+    grid-row: 3;
+    grid-column: 1;
+    margin-bottom: -8em;
+    transform: translateY(8em) translateX(2em);
+  }
+
+  .team_item:nth-child(5) {
+    grid-row: 4;
+    grid-column: 3;
+    transform: translateX(16em);
+  }
+
+  .team_item:nth-child(6) {
+    grid-row: 5;
+    grid-column: 1;
+    transform: translateY(-8em) translateX(8em);
+  }
+}
+
+/* Floating Momentum Stickers */
+.team-sticker {
+  pointer-events: auto;
+}
+
+.team-sticker img,
+.team-sticker svg {
+  width: 100%;
+  height: auto;
+}
+
+.team-sticker.is-01 {
+  width: 12em;
+  position: absolute;
+  inset: -8em auto auto 10em;
+  transform: rotate(-10deg);
+  z-index: 4;
+}
+
+.team-sticker.is-02 {
+  width: 14em;
+  position: absolute;
+  top: 128em;
+  left: 28em;
+  transform: rotate(-10deg);
+  z-index: 4;
+}
+
+.team-sticker.is-03 {
+  width: 12em;
+  position: absolute;
+  top: 96em;
+  right: 16em;
+  z-index: 4;
+}
+
+.team_btn {
+  position: absolute;
+  inset: auto 44em 16em auto;
+  transform: scale(1.5);
+  z-index: 4;
+}
+
+/* Clean Responsive Collapse on Tablet & Mobile */
+@media screen and (max-width: 991px) {
+  .team_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+  }
+
+  .team_title {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  .team_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    width: 100%;
+  }
+
+  .team_card {
+    width: 100%;
+  }
+
+  .team-sticker {
+    display: none;
+  }
+
+  .team_btn {
+    position: relative;
+    inset: auto;
+    transform: scale(1.1);
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .team_btn {
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 6: FOOTER (.footer.theme-dark#contacto)
+   -------------------------------------------------------------------------- */
+
+.footer {
+  position: relative;
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+  contain: layout style;
+}
+
+.footer-cta {
+  padding: 20em 0;
+  border-bottom: 1px solid var(--color-hairline-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-cta_wrap {
+  max-width: 80em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-divider {
+  display: none;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 5em 0;
+  gap: 2em;
+}
+
+.footer-main_logo {
+  width: 40%;
+  padding-inline: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 28em;
+  color: var(--color-white);
+  display: block;
+}
+
+.footer-logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.footer-main_cols {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65em;
+}
+
+.footer-col_title {
+  font-family: var(--font-display);
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  font-variation-settings: 'wght' 700, 'wdth' 75, 'opsz' 30;
+  margin-bottom: 0.35em;
+}
+
+.footer-socials-col {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.footer-list li,
+.footer-link {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  opacity: 0.65;
+  font-family: var(--font-serif);
+  color: var(--color-white);
+  display: inline-block;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.footer-list li:has(a) {
+  opacity: 1;
+}
+
+.footer-list a {
+  opacity: 0.65;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.footer-list a:hover,
+.footer-link:hover {
+  opacity: 1;
+  color: var(--color-lime);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-hairline-dark);
+  padding: 1.25em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  font-size: 1.125em;
+  color: var(--color-ink-on-dark-muted);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 2.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--color-lime);
+}
+
+.footer-bottom .is-left {
+  width: 50%;
+}
+
+.footer-bottom_legals {
+  display: flex;
+  gap: 4em;
+  align-items: center;
+}
+
+.footer-bottom .is-right {
+  margin-left: auto;
+}
+
+.footer-bottom_link {
+  font-size: 1.125em;
+  opacity: 0.7;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.footer-bottom_link:hover {
+  opacity: 1;
+  color: var(--color-lime);
+}
+
+@media screen and (max-width: 991px) {
+  .footer-cta {
+    padding: 10em 0;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    padding: 3.5em 0;
+    gap: 3em;
+  }
+
+  .footer-main_logo {
+    width: 100%;
+    padding-inline: 0;
+    justify-content: flex-start;
+  }
+
+  .footer-logo {
+    max-width: 18em;
+  }
+
+  .footer-main_cols {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2.5em;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1.5em 0;
+  }
+
+  .footer-bottom .is-left,
+  .footer-bottom .is-right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer-bottom_legals {
+    gap: 1.75em;
+    flex-wrap: wrap;
+  }
+}

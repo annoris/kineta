@@ -1,0 +1,121 @@
+/* ==========================================================================
+   ANIMATIONS.CSS — 60fps GPU-Only Keyframes, Reveal States & Reduced Motion
+   RULES:
+   - ZERO will-change: font-variation-settings on .char
+   - ZERO backdrop-filter: blur anywhere
+   - GPU-composited transform & opacity only
+   ========================================================================== */
+
+/* Pure GPU Marquee Loop (Hero Stockists) */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Cursor Marquee Pill Loop */
+@keyframes cursorMarqueeLoop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Scroll Badge Continuous Rotation */
+@keyframes slowSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Split-Text Character & Line Containers (NO will-change explosion!) */
+.split-line,
+.line-mask {
+  overflow: hidden;
+  display: block;
+}
+
+.split-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.char {
+  display: inline-block;
+  font-variation-settings: 'wght' var(--wght, 700), 'wdth' 75, 'opsz' 30;
+}
+
+.heading-alt .char {
+  font-variation-settings: normal;
+}
+
+/* Hand-Drawn Underline SVG Path Defaults */
+.draw-line-box path,
+.text-draw__box path {
+  vector-effect: non-scaling-stroke;
+}
+
+/* Footer CTA Mouse Image Trail Items (GPU-only) */
+.image-trail-item,
+.created-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13em;
+  aspect-ratio: 4 / 5;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: var(--radius-none);
+  overflow: hidden;
+  background-color: var(--color-white);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.image-trail-item {
+  padding: 0.5em;
+}
+
+.created-img {
+  border: 0.45em solid var(--color-white);
+  object-fit: cover;
+}
+
+.image-trail-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover Pause on Hero Marquee for Readability */
+.hero_clients:hover .marquee-advanced__scroll,
+.hero_clients:hover .marquee-advanced__track,
+.hero_clients:hover .hero_clients-marquee {
+  animation-play-state: paused;
+}
+
+/* Respect User Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-advanced__scroll,
+  .marquee-advanced__track,
+  .hero_clients-marquee,
+  .cursor-marquee_track,
+  .cursor-marquee__track,
+  .featured_scroll-svg {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

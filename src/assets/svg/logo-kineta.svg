@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" fill="currentColor" role="img" aria-label="Kineta">
+  <!-- Expressive brush-script wordmark: Kineta (inherits currentColor) -->
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Capital K stem + flourish -->
+    <path d="M22 14 C19 28, 15 44, 11 56" stroke-width="6.5"/>
+    <path d="M44 13 C36 22, 26 30, 17 35 C25 37, 32 45, 38 55 C41 59, 46 58, 50 53" stroke-width="5.5"/>
+    <!-- Lowercase i -->
+    <path d="M59 31 C56 41, 54 49, 55 54 C56 57, 61 56, 66 50" stroke-width="5.2"/>
+    <!-- Lowercase n -->
+    <path d="M72 32 C70 40, 68 48, 67 55 M70 39 C75 31, 83 30, 84 36 C85 42, 82 49, 83 54 C84 57, 89 56, 94 50" stroke-width="5.2"/>
+    <!-- Lowercase e -->
+    <path d="M98 44 C107 44, 115 40, 116 34 C116 29, 108 29, 102 35 C96 41, 96 51, 102 55 C108 58, 115 55, 121 49" stroke-width="5.2"/>
+    <!-- Lowercase t -->
+    <path d="M134 15 C130 28, 127 42, 127 52 C127 57, 133 58, 140 52" stroke-width="5.4"/>
+    <path d="M120 27 C129 25, 139 24, 147 23" stroke-width="4.4"/>
+    <!-- Lowercase a + exit swash -->
+    <path d="M167 34 C162 29, 153 31, 148 39 C143 47, 145 55, 152 56 C158 56, 164 49, 168 38 C166 46, 166 53, 171 55 C177 57, 188 51, 202 44" stroke-width="5.2"/>
+    <!-- Kinetic underline swash -->
+    <path d="M18 65 C68 59, 136 58, 196 61" stroke-width="3.2"/>
+  </g>
+  <!-- Tilted dot on i + kinetic spark -->
+  <circle cx="62" cy="19" r="3.6" fill="currentColor"/>
+  <path d="M204 20 L207 26 L213 28 L207 30 L204 36 L201 30 L195 28 L201 26 Z" fill="currentColor"/>
+</svg>

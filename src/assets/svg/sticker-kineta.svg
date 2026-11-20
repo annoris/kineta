@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 104" role="img" aria-label="KINETA Layered Sticker">
+  <defs>
+    <filter id="stickerShadow3" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#111111" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#stickerShadow3)" transform="rotate(-3 120 52)">
+    <!-- White die-cut outer pill -->
+    <rect x="8" y="14" width="224" height="76" rx="22" fill="#FFFFFF"/>
+    <!-- Electric Emerald back offset block -->
+    <rect x="18" y="24" width="206" height="58" rx="15" fill="#00994D" stroke="#111111" stroke-width="2.5"/>
+    <!-- Electric Lavender middle offset block -->
+    <rect x="14" y="20" width="206" height="58" rx="15" fill="#9D6BFF" stroke="#111111" stroke-width="2.5"/>
+    <!-- Acid Chartreuse front face -->
+    <rect x="11" y="17" width="206" height="58" rx="15" fill="#D8FF00" stroke="#111111" stroke-width="2.8"/>
+    <!-- Layered KINETA wordmark -->
+    <text x="116" y="59" text-anchor="middle" font-family="'Roboto Flex', 'Arial Narrow', Impact, sans-serif" font-weight="900" font-size="40" letter-spacing="2" fill="#00994D">KINETA</text>
+    <text x="113" y="56" text-anchor="middle" font-family="'Roboto Flex', 'Arial Narrow', Impact, sans-serif" font-weight="900" font-size="40" letter-spacing="2" fill="#111111">KINETA</text>
+  </g>
+</svg>

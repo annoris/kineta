@@ -1,0 +1,75 @@
+/* ==========================================================================
+   LAYOUT.CSS — Global Wrappers, Gutters, Section Spacing & Theme Surfaces
+   ========================================================================== */
+
+.page-wrapper {
+  overflow-x: clip;
+  position: relative;
+  width: 100%;
+}
+
+.padding-global {
+  padding-inline: 2em;
+}
+
+.container,
+.container-col-12 {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+body.is-overlay-open,
+body.is-nav-open {
+  overflow: hidden;
+}
+
+.section-padding-128px {
+  padding-block: 8em;
+}
+
+.theme-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+}
+
+.max-width-448px {
+  max-width: 28em;
+  width: 100%;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .padding-global {
+    padding-inline: 1.25em;
+  }
+
+  .section-padding-128px {
+    padding-block: 5em;
+  }
+}

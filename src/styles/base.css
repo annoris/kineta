@@ -1,0 +1,262 @@
+/* ==========================================================================
+   BASE.CSS — Reset, Lenis Smooth Scroll Rules, Fluid Root Scale & Typography
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Official Lenis Smooth Scroll Rules (NEVER scroll-behavior: smooth) */
+html.lenis,
+html.lenis body {
+  height: auto;
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Fluid Root Scaling — 1440px viewport => 1em = 12px */
+body {
+  font-size: calc(clamp(992px, 100dvw, 3840px) / (1920 / 16));
+  background-color: var(--color-bg-light);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.3;
+  overflow-x: clip;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    font-size: calc(clamp(768px, 100dvw, 991px) / (991 / 16));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: calc(clamp(480px, 100dvw, 767px) / (767 / 16));
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body {
+    font-size: calc(clamp(320px, 100dvw, 479px) / (479 / 16));
+  }
+}
+
+/* Element Defaults */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--color-lime);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.theme-dark :focus-visible {
+  outline-color: var(--color-lime);
+}
+
+/* ==========================================================================
+   EDITORIAL TYPOGRAPHY SCALE (1-to-1 Extrafazant Proportions)
+   ========================================================================== */
+
+.heading-xxl,
+.heading-xl,
+.heading-l,
+.heading-m,
+.heading-xxs {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-variation-settings: 'wght' var(--wght, 700), 'wdth' 75, 'opsz' 30;
+  font-optical-sizing: none;
+}
+
+.heading-xxl {
+  font-size: 12em;
+  line-height: 0.8em;
+  letter-spacing: -0.02em;
+}
+
+.heading-xl {
+  font-size: 8em;
+  line-height: 0.8em;
+  letter-spacing: -0.02em;
+}
+
+.heading-l {
+  font-size: 6em;
+  line-height: 0.8em;
+  letter-spacing: -0.02em;
+}
+
+.heading-m {
+  font-size: 5em;
+  line-height: 0.8em;
+  letter-spacing: -0.02em;
+}
+
+.heading-xxs {
+  font-size: 1.5em;
+  line-height: 0.9em;
+  letter-spacing: -0.02em;
+}
+
+/* UPRIGHT High-Contrast Serif Accent — 1:1 Baseline & Size Ratio */
+.heading-alt {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: inherit;
+  font-size: 1em;
+  font-variation-settings: normal;
+  letter-spacing: -0.01em;
+}
+
+/* Eyebrows */
+.eyebrow-l,
+.eyebrow-m,
+.eyebrow-s {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-ink);
+}
+
+.theme-dark .eyebrow-l,
+.theme-dark .eyebrow-m,
+.theme-dark .eyebrow-s {
+  color: var(--color-white);
+}
+
+.eyebrow-l {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.eyebrow-m {
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+.eyebrow-s {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+/* Body Paragraph */
+.paragraph-m {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+/* Mobile Display Scale Refinements */
+@media screen and (max-width: 767px) {
+  .heading-xxl {
+    font-size: 6.5em;
+    line-height: 0.84em;
+  }
+
+  .heading-xl {
+    font-size: 5em;
+    line-height: 0.84em;
+  }
+
+  .heading-l {
+    font-size: 4em;
+    line-height: 0.86em;
+  }
+
+  .heading-m {
+    font-size: 3.25em;
+    line-height: 0.88em;
+  }
+
+  .eyebrow-l {
+    font-size: 2.25em;
+  }
+
+  .eyebrow-m {
+    font-size: 1.85em;
+  }
+
+  .eyebrow-s {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-xxl {
+    font-size: 4.8em;
+  }
+
+  .heading-xl {
+    font-size: 3.8em;
+  }
+
+  .heading-l {
+    font-size: 3.1em;
+  }
+}

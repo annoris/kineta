@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETA — Craft botanical energy that puts your day in motion</title>
+  <meta name="description" content="Small-batch botanical sparkling energy drinks. Locked-60fps GSAP + Lenis editorial web showcase with zero build-step overhead & native Solana Pay Web3 checkout.">
+  <meta name="theme-color" content="#F4F3EE">
+
+  <!-- OpenGraph / X (Twitter) Social Preview Cards (1280x640) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://annoris.github.io/kineta/">
+  <meta property="og:title" content="KINETA — 60fps GSAP + Lenis + Solana Pay Web3 Showcase">
+  <meta property="og:description" content="Locked-60fps editorial web showcase, variable font proximity physics, 3D ScrollTrigger stacks & native Solana Pay built with zero build-step overhead.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/annoris/kineta/main/docs/images/00-github-social-preview-banner.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KINETA — 60fps GSAP + Lenis + Solana Pay Web3 Showcase">
+  <meta name="twitter:description" content="Locked-60fps editorial web showcase, variable font proximity physics, 3D ScrollTrigger stacks & native Solana Pay built with zero build-step overhead.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/annoris/kineta/main/docs/images/00-github-social-preview-banner.png">
+
+  <!-- Fonts: Trimmed Roboto Flex, Instrument Serif & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Roboto+Flex:opsz,wdth,wght@8..144,75,200..800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./src/styles/tokens.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/layout.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/sections.css">
+  <link rel="stylesheet" href="./src/styles/animations.css">
+
+  <!-- Motion Libraries (Deferred) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script type="module" src="./src/scripts/main.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- ====================================================================
+         HEADER NAVIGATION
+         ==================================================================== -->
+    <header class="nav" data-nav-status="closed" data-nav-theme-active="light">
+      <div class="container-col-12">
+        <div class="nav-inner">
+          <a href="#hero" class="nav-logo" aria-label="Kineta — Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" fill="currentColor" role="img" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 14 C19 28, 15 44, 11 56" stroke-width="6.5"/>
+                <path d="M44 13 C36 22, 26 30, 17 35 C25 37, 32 45, 38 55 C41 59, 46 58, 50 53" stroke-width="5.5"/>
+                <path d="M59 31 C56 41, 54 49, 55 54 C56 57, 61 56, 66 50" stroke-width="5.2"/>
+                <path d="M72 32 C70 40, 68 48, 67 55 M70 39 C75 31, 83 30, 84 36 C85 42, 82 49, 83 54 C84 57, 89 56, 94 50" stroke-width="5.2"/>
+                <path d="M98 44 C107 44, 115 40, 116 34 C116 29, 108 29, 102 35 C96 41, 96 51, 102 55 C108 58, 115 55, 121 49" stroke-width="5.2"/>
+                <path d="M134 15 C130 28, 127 42, 127 52 C127 57, 133 58, 140 52" stroke-width="5.4"/>
+                <path d="M120 27 C129 25, 139 24, 147 23" stroke-width="4.4"/>
+                <path d="M167 34 C162 29, 153 31, 148 39 C143 47, 145 55, 152 56 C158 56, 164 49, 168 38 C166 46, 166 53, 171 55 C177 57, 188 51, 202 44" stroke-width="5.2"/>
+                <path d="M18 65 C68 59, 136 58, 196 61" stroke-width="3.2"/>
+              </g>
+              <circle cx="62" cy="19" r="3.6" fill="currentColor"/>
+              <path d="M204 20 L207 26 L213 28 L207 30 L204 36 L201 30 L195 28 L201 26 Z" fill="currentColor"/>
+            </svg>
+          </a>
+
+          <nav class="nav-links" aria-label="Primary navigation">
+            <a href="#intro" class="nav-link">
+              <span class="text-draw__span">ABOUT</span>
+              <span class="text-draw__box is-menu" data-draw-line-persist aria-hidden="true">
+                <svg viewBox="0 0 120 10" preserveAspectRatio="none">
+                  <path d="M2 7 C 35 2, 85 9, 118 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </a>
+            <a href="#ediciones" class="nav-link">
+              <span class="text-draw__span">EDITIONS</span>
+              <span class="text-draw__box is-menu" data-draw-line-persist aria-hidden="true">
+                <svg viewBox="0 0 120 10" preserveAspectRatio="none">
+                  <path d="M2 7 C 35 2, 85 9, 118 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </a>
+            <a href="#sabores" class="nav-link">
+              <span class="text-draw__span">FLAVORS</span>
+              <span class="text-draw__box is-menu" data-draw-line-persist aria-hidden="true">
+                <svg viewBox="0 0 120 10" preserveAspectRatio="none">
+                  <path d="M2 7 C 35 2, 85 9, 118 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </a>
+            <button type="button" class="nav-link nav-solana-trigger" data-solana-open aria-label="Support or Pay with Solana (SOL / USDC)">
+              <span class="nav-solana-dot" aria-hidden="true"></span>
+              <span class="text-draw__span">SOLANA PAY</span>
+              <span class="text-draw__box is-menu" data-draw-line-persist aria-hidden="true">
+                <svg viewBox="0 0 120 10" preserveAspectRatio="none">
+                  <path d="M2 7 C 35 2, 85 9, 118 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </button>
+          </nav>
+
+          <div class="hide-mobile">
+            <a href="#contacto" class="button-093">
+              <span class="button-093__bg" aria-hidden="true"></span>
+              <span class="button-093__inner">
+                <span class="button-093__dot-wrap" aria-hidden="true">
+                  <span class="button-093__dot" style="--index: 0"></span>
+                  <span class="button-093__dot" style="--index: 1"></span>
+                  <span class="button-093__dot" style="--index: 2"></span>
+                  <span class="button-093__dot" style="--index: 3"></span>
+                </span>
+                <span class="button-093__text-wrap">
+                  <span class="button-093__text is--default">Contact</span>
+                  <span class="button-093__text is--hover" aria-hidden="true">Contact</span>
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <button
+            type="button"
+            class="nav-toggle"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="nav-toggle_line"></span>
+            <span class="nav-toggle_line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Overlay -->
+      <div id="mobile-nav-drawer" class="nav-mobile" aria-hidden="true">
+        <div class="nav-mobile_inner">
+          <a href="#intro" class="nav-mobile_link" data-mobile-nav-link>ABOUT</a>
+          <a href="#ediciones" class="nav-mobile_link" data-mobile-nav-link>EDITIONS</a>
+          <a href="#sabores" class="nav-mobile_link" data-mobile-nav-link>FLAVORS</a>
+          <a href="#equipo" class="nav-mobile_link" data-mobile-nav-link>TEAM</a>
+          <a href="#contacto" class="nav-mobile_link" data-mobile-nav-link>CONTACT</a>
+          <button type="button" class="nav-mobile_link" data-solana-open data-mobile-nav-link>SOLANA PAY</button>
+          <button type="button" class="button-052" data-drawer-open data-mobile-nav-link>
+            <span class="button-052_arrow is-left" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9h12M10 4l5 5-5 5"/>
+              </svg>
+            </span>
+            <span class="button-052_label">ORDER YOUR PACK</span>
+            <span class="button-052_arrow is-right" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9h12M10 4l5 5-5 5"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-wrapper">
+      <!-- ==================================================================
+           SECTION 1: HERO (.section_hero#hero)
+           ================================================================== -->
+      <section class="section_hero" id="hero">
+        <div class="hero_wrapper is-home">
+          <!-- Floating Cursor Media Stack -->
+          <div class="cursor-card is-home" data-cursor-cards-medias aria-hidden="true">
+            <div class="cursor-card_media">
+              <img src="./src/assets/images/featured-volt-yuzu.jpg" alt="Kineta Volt Yuzu botanical drink" loading="lazy" decoding="async">
+            </div>
+            <div class="cursor-card_media">
+              <img src="./src/assets/images/flavor-berry-pulse.jpg" alt="Kineta Berry Pulse botanical drink" loading="lazy" decoding="async">
+            </div>
+            <div class="cursor-card_media">
+              <img src="./src/assets/images/featured-solar-mango.jpg" alt="Kineta Solar Mango botanical drink" loading="lazy" decoding="async">
+            </div>
+            <div class="cursor-card_media">
+              <img src="./src/assets/images/featured-night-drop.jpg" alt="Kineta Night Drop limited edition" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="section-padding-128px">
+            <div class="padding-global">
+              <div class="container-col-12">
+                <div class="hero_content">
+                  <div class="hero_subtitle">
+                    <p class="eyebrow-l">Botanical drinks, clean energy &amp; real flavor</p>
+                  </div>
+
+                  <h1 class="heading-xxl" data-text-reveal data-font-weight-hover>PUTS YOUR DAY<br>IN <span class="heading-alt">MOTION</span></h1>
+
+                  <a href="#intro" class="btn-link">
+                    <span class="btn-link_text">
+                      Discover more
+                      <span class="text-draw__box is-btn-link" data-draw-line-always aria-hidden="true">
+                        <svg viewBox="0 0 180 14" preserveAspectRatio="none">
+                          <path d="M2 9 C 24 2, 46 13, 68 6 C 90 1, 112 13, 134 6 C 152 2, 166 11, 178 6" fill="none" stroke="#00994D" stroke-width="2.6" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="btn-link_arrow" aria-hidden="true">
+                      <svg class="btn-link_arrow-svg is-first" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 3v12M4 10l5 5 5-5"/>
+                      </svg>
+                      <svg class="btn-link_arrow-svg is-second" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 3v12M4 10l5 5 5-5"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infinite Partner Marquee -->
+          <div class="hero_clients" aria-label="Selected stockists and partners">
+            <div class="marquee-advanced">
+              <div class="marquee-advanced__scroll" data-marquee-duplicate="2">
+                <div class="marquee-advanced__collection">
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 188 36" fill="currentColor" role="img" aria-label="GREENHOUSE">
+                      <rect x="2" y="10" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                      <circle cx="9" cy="17" r="3"/>
+                      <text x="24" y="24" font-family="Inter, sans-serif" font-weight="600" font-size="18" letter-spacing="2.4">GREENHOUSE</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 132 36" fill="currentColor" role="img" aria-label="MONDO">
+                      <circle cx="12" cy="18" r="8" fill="none" stroke="currentColor" stroke-width="2.8"/>
+                      <text x="28" y="25" font-family="Roboto Flex, sans-serif" font-weight="800" font-size="22" letter-spacing="1.5">MONDO</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 116 36" fill="currentColor" role="img" aria-label="RITMO">
+                      <path d="M4 24 L10 10 L16 24 M7 19 H13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <text x="24" y="25" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="26" letter-spacing="1">RITMO</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 168 36" fill="currentColor" role="img" aria-label="SOL ATELIER">
+                      <path d="M12 7 L14 14 L21 16 L14 18 L12 25 L10 18 L3 16 L10 14 Z"/>
+                      <text x="28" y="24" font-family="Inter, sans-serif" font-weight="600" font-size="17" letter-spacing="2.6">SOL ATELIER</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 164 36" fill="currentColor" role="img" aria-label="NORTH SIDE">
+                      <polygon points="10,8 18,24 2,24" fill="none" stroke="currentColor" stroke-width="2.4"/>
+                      <text x="26" y="24" font-family="Roboto Flex, sans-serif" font-weight="700" font-size="19" letter-spacing="2">NORTH SIDE</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 104 36" fill="currentColor" role="img" aria-label="MIST">
+                      <path d="M4 15 Q10 10 16 15 T28 15 M4 22 Q10 17 16 22 T28 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                      <text x="36" y="24" font-family="Inter, sans-serif" font-weight="600" font-size="19" letter-spacing="3">MIST</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 156 36" fill="currentColor" role="img" aria-label="NOMA CAFÉ">
+                      <text x="4" y="25" font-family="Instrument Serif, Georgia, serif" font-size="25" letter-spacing="1.4">NOMA CAFÉ</text>
+                    </svg>
+                  </div>
+                  <div class="marquee-advanced__item-width">
+                    <svg viewBox="0 0 184 36" fill="currentColor" role="img" aria-label="BICYCLE CLUB">
+                      <circle cx="9" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+                      <circle cx="23" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+                      <path d="M9 20 L15 12 L23 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <text x="35" y="24" font-family="Roboto Flex, sans-serif" font-weight="800" font-size="18" letter-spacing="1.6">BICYCLE CLUB</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECTION 2: INTRO / ABOUT (.section_intro#intro)
+           ================================================================== -->
+      <section class="section_intro" id="intro">
+        <div class="section-padding-128px">
+          <div class="padding-global">
+            <div class="container-col-12">
+              <div class="intro_wrapper">
+                <div class="intro_col is-media">
+                  <div class="intro-media" data-interactive-collage-init>
+                    <div class="intro-media-l" data-collage-item>
+                      <div class="intro-media-l_card">
+                        <img
+                          src="./src/assets/images/intro-polaroid-1.jpg"
+                          alt="Kineta small-batch flavor workshop cold-steeping botanicals"
+                          loading="lazy"
+                          decoding="async"
+                        >
+                      </div>
+                    </div>
+                    <div class="intro-media-m" data-collage-item>
+                      <div class="intro-media-m_card">
+                        <img
+                          src="./src/assets/images/intro-polaroid-2.jpg"
+                          alt="Kineta Run Club community sharing cold cans outdoors"
+                          loading="lazy"
+                          decoding="async"
+                        >
+                      </div>
+                    </div>
+                    <div class="intro-media-s" data-collage-item>
+                      <img
+                        src="./src/assets/svg/sticker-run-club.svg"
+                        alt="Kineta Run Club badge"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="intro_col">
+                  <div class="intro-content">
+                    <p class="eyebrow-m">Who we are</p>
+                    <h2 class="heading-l" data-scroll-reveal>THE MAKERS OF <span class="heading-alt">KINETA</span></h2>
+                    <div class="max-width-448px">
+                      <p class="paragraph-m">No bloated corporate lab. We're a small-batch flavor workshop mixing real botanicals, crisp fizz, and clean energy. Sharp, before you even need it.</p>
+                    </div>
+                    <a href="#equipo" class="button-052">
+                      <span class="button-052_arrow is-left" aria-hidden="true">
+                        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 9h12M10 4l5 5-5 5"/>
+                        </svg>
+                      </span>
+                      <span class="button-052_label">MORE ABOUT US</span>
+                      <span class="button-052_arrow is-right" aria-hidden="true">
+                        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 9h12M10 4l5 5-5 5"/>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECTION 3: FEATURED EDITIONS PINNED 3D STACK (.section_featured)
+           ================================================================== -->
+      <section class="section_featured theme-dark" id="ediciones" data-nav-theme="dark" data-featured-stack>
+        <div class="featured_pin" data-featured-stack-pin>
+          <div class="featured_title">
+            <div class="featured_subtitle">
+              <p class="eyebrow-s">Impossible to miss, built to share. A taste of what we craft.</p>
+            </div>
+            <h2 class="heading-xl" data-scroll-reveal>RECENT <span class="heading-alt">EDITIONS</span></h2>
+          </div>
+
+          <div class="featured_collection">
+            <div class="featured_list" data-featured-stack-root>
+              <article
+                class="featured_slide"
+                data-featured-stack-slide
+                style="--card-accent: #D8FF00;"
+                data-cursor-marquee-text="View edition →"
+                data-edition-open="edicion-nocturna"
+                role="button"
+                tabindex="0"
+                aria-label="View Night Drop edition details"
+              >
+                <div class="featured-card">
+                  <div class="featured-card_img">
+                    <img
+                      src="./src/assets/images/featured-night-drop.jpg"
+                      alt="Kineta Night Drop limited edition photography"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                  <div class="featured-card_title">
+                    <h3 class="featured-card_h">NIGHT DROP</h3>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="featured_slide"
+                data-featured-stack-slide
+                style="--card-accent: #00994D;"
+                data-cursor-marquee-text="View edition →"
+                data-edition-open="volt-yuzu-01"
+                role="button"
+                tabindex="0"
+                aria-label="View Volt Yuzu edition details"
+              >
+                <div class="featured-card">
+                  <div class="featured-card_img">
+                    <img
+                      src="./src/assets/images/featured-volt-yuzu.jpg"
+                      alt="Kineta Volt Yuzu limited edition photography"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                  <div class="featured-card_title">
+                    <h3 class="featured-card_h">VOLT YUZU</h3>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="featured_slide"
+                data-featured-stack-slide
+                style="--card-accent: #FF3B1F;"
+                data-cursor-marquee-text="View edition →"
+                data-edition-open="solar-mango-club"
+                role="button"
+                tabindex="0"
+                aria-label="View Solar Mango edition details"
+              >
+                <div class="featured-card">
+                  <div class="featured-card_img">
+                    <img
+                      src="./src/assets/images/featured-solar-mango.jpg"
+                      alt="Kineta Solar Mango limited edition photography"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                  <div class="featured-card_title">
+                    <h3 class="featured-card_h">SOLAR MANGO</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="featured_btn">
+            <a href="#sabores" class="button-052" data-drawer-open>
+              <span class="button-052_arrow is-left" aria-hidden="true">
+                <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9h12M10 4l5 5-5 5"/>
+                </svg>
+              </span>
+              <span class="button-052_label">SEE ALL EDITIONS</span>
+              <span class="button-052_arrow is-right" aria-hidden="true">
+                <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9h12M10 4l5 5-5 5"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="featured_scroll-svg" aria-hidden="true">
+            <img src="./src/assets/svg/scroll-badge.svg" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECTION 4: FLAVORS / WHAT WE CRAFT (.section_services#sabores)
+           ================================================================== -->
+      <section class="section_services" id="sabores">
+        <div class="section-padding-128px">
+          <div class="padding-global">
+            <div class="container-col-12">
+              <div class="services_wrapper">
+                <div class="services_title">
+                  <p class="eyebrow-m">Our lineup</p>
+                  <h2 class="heading-xl" data-scroll-reveal>WHAT WE <span class="heading-alt">CRAFT</span></h2>
+                </div>
+
+                <div class="services-cards_collection">
+                  <div class="services-cards_list" data-interactive-collage-init>
+                    <div class="services-cards_item" data-collage-item>
+                      <article
+                        class="services-card"
+                        style="--card-accent: #00994D;"
+                        data-video-on-hover="not-active"
+                        data-drawer-open
+                        data-preset-flavor="volt-yuzu"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Add Volt Yuzu to your pack"
+                      >
+                        <div class="services-card_wrap">
+                          <div class="services-card_media">
+                            <img
+                              src="./src/assets/images/featured-volt-yuzu.jpg"
+                              alt="Kineta Volt Yuzu cold-pressed Japanese yuzu drink"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                          </div>
+                          <div class="services-card_content">
+                            <h3 class="heading-m">VOLT YUZU</h3>
+                            <p class="eyebrow-s">Precision citrus spark</p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="services-cards_item" data-collage-item>
+                      <article
+                        class="services-card"
+                        style="--card-accent: #9D6BFF;"
+                        data-video-on-hover="not-active"
+                        data-drawer-open
+                        data-preset-flavor="berry-pulse"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Add Berry Pulse to your pack"
+                      >
+                        <div class="services-card_wrap">
+                          <div class="services-card_media">
+                            <img
+                              src="./src/assets/images/flavor-berry-pulse.jpg"
+                              alt="Kineta Berry Pulse hibiscus and wild blackberry drink"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                          </div>
+                          <div class="services-card_content">
+                            <h3 class="heading-m">BERRY PULSE</h3>
+                            <p class="eyebrow-s">Tart, floral, zero filter</p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="services-cards_item" data-collage-item>
+                      <article
+                        class="services-card"
+                        style="--card-accent: #FF3B1F;"
+                        data-video-on-hover="not-active"
+                        data-drawer-open
+                        data-preset-flavor="solar-mango"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Add Solar Mango to your pack"
+                      >
+                        <div class="services-card_wrap">
+                          <div class="services-card_media">
+                            <img
+                              src="./src/assets/images/featured-solar-mango.jpg"
+                              alt="Kineta Solar Mango ripe mango and ginger drink"
+                              loading="lazy"
+                              decoding="async"
+                            >
+                          </div>
+                          <div class="services-card_content">
+                            <h3 class="heading-m">SOLAR MANGO</h3>
+                            <p class="eyebrow-s">Tropical heat, ice-cold</p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="services_btn">
+                  <a href="#contacto" class="btn-link" data-drawer-open>
+                    <span class="btn-link_text">
+                      Explore the range
+                      <span class="text-draw__box is-btn-link" data-draw-line-always aria-hidden="true">
+                        <svg viewBox="0 0 180 14" preserveAspectRatio="none">
+                          <path d="M2 9 C 24 2, 46 13, 68 6 C 90 1, 112 13, 134 6 C 152 2, 166 11, 178 6" fill="none" stroke="#00994D" stroke-width="2.6" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="btn-link_arrow" aria-hidden="true">
+                      <svg class="btn-link_arrow-svg is-first" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9h12M10 4l5 5-5 5"/>
+                      </svg>
+                      <svg class="btn-link_arrow-svg is-second" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9h12M10 4l5 5-5 5"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECTION 5: TEAM EDITORIAL GALLERY (.section_team#equipo)
+           ================================================================== -->
+      <section class="section_team" id="equipo">
+        <div class="section-padding-128px">
+          <div class="padding-global">
+            <div class="container-col-12">
+              <div class="team_wrapper" data-momentum-hover-init>
+                <div class="team_title">
+                  <p class="eyebrow-m">The makers behind Kineta</p>
+                  <h2 class="heading-xl" data-scroll-reveal data-font-weight-hover><span class="heading-alt">KINE</span>TA-<span class="heading-alt">Team</span></h2>
+                  <div class="team-sticker is-01" data-momentum-hover-element>
+                    <img src="./src/assets/svg/sticker-kn.svg" alt="KN studio badge" loading="lazy" decoding="async">
+                  </div>
+                </div>
+
+                <div class="team_collection">
+                  <div class="team_list" data-team-parallax-distance="200">
+                    <div class="team_item">
+                      <div class="team_card" data-momentum-hover-target>
+                        <div class="team_img">
+                          <img src="./src/assets/images/team-1.jpg" alt="Kineta team portrait 1" loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team_item">
+                      <div class="team_card" data-momentum-hover-target>
+                        <div class="team_img">
+                          <img src="./src/assets/images/team-2.jpg" alt="Kineta team portrait 2" loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team_item">
+                      <div class="team_card" data-momentum-hover-target>
+                        <div class="team_img">
+                          <img src="./src/assets/images/team-3.jpg" alt="Kineta team portrait 3" loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team_item">
+                      <div class="team_card" data-momentum-hover-target>
+                        <div class="team_img">
+                          <img src="./src/assets/images/team-4.jpg" alt="Kineta team portrait 4" loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team_item">
+                      <div class="team_card" data-momentum-hover-target>
+                        <div class="team_img">
+                          <img src="./src/assets/images/team-5.jpg" alt="Kineta team portrait 5" loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team_item">
+                      <div class="team_card" data-momentum-hover-target>
+                        <div class="team_img">
+                          <img src="./src/assets/images/team-6.jpg" alt="Kineta team portrait 6" loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="team-sticker is-02" data-momentum-hover-element>
+                  <img src="./src/assets/svg/sticker-kineta.svg" alt="Kineta studio sticker" loading="lazy" decoding="async">
+                </div>
+                <div class="team-sticker is-03" data-momentum-hover-element>
+                  <img src="./src/assets/svg/sticker-puro-sabor.svg" alt="Pure flavor sticker" loading="lazy" decoding="async">
+                </div>
+
+                <div class="team_btn">
+                  <a href="#contacto" class="btn-link">
+                    <span class="btn-link_text">
+                      Meet the team
+                      <span class="text-draw__box is-btn-link" data-draw-line-always aria-hidden="true">
+                        <svg viewBox="0 0 180 14" preserveAspectRatio="none">
+                          <path d="M2 9 C 24 2, 46 13, 68 6 C 90 1, 112 13, 134 6 C 152 2, 166 11, 178 6" fill="none" stroke="#00994D" stroke-width="2.6" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="btn-link_arrow" aria-hidden="true">
+                      <svg class="btn-link_arrow-svg is-first" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9h12M10 4l5 5-5 5"/>
+                      </svg>
+                      <svg class="btn-link_arrow-svg is-second" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9h12M10 4l5 5-5 5"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================================================================
+         SECTION 6: FOOTER (.footer.theme-dark#contacto)
+         ==================================================================== -->
+    <footer class="footer theme-dark" id="contacto" data-nav-theme="dark">
+      <div class="padding-global">
+        <div class="container-col-12">
+          <div class="footer_wrapper">
+            <div class="footer-cta" data-image-trail>
+              <div class="footer-cta_wrap">
+                <h2 class="heading-xl" data-scroll-reveal data-font-weight-hover>READY TO SET THINGS<br><span class="heading-alt">IN MOTION?</span></h2>
+                <p class="paragraph-m opacity-75">Tell us where you want Kineta. We'll bring the spark.</p>
+                <a href="#contacto" class="button-052" data-drawer-open>
+                  <span class="button-052_arrow is-left" aria-hidden="true">
+                    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 9h12M10 4l5 5-5 5"/>
+                    </svg>
+                  </span>
+                  <span class="button-052_label">ORDER YOUR PACK</span>
+                  <span class="button-052_arrow is-right" aria-hidden="true">
+                    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 9h12M10 4l5 5-5 5"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-main">
+              <div class="footer-main_logo">
+                <a href="#hero" class="footer-logo" aria-label="Kineta — Back to top">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" fill="currentColor" role="img" aria-hidden="true">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 14 C19 28, 15 44, 11 56" stroke-width="6.5"/>
+                      <path d="M44 13 C36 22, 26 30, 17 35 C25 37, 32 45, 38 55 C41 59, 46 58, 50 53" stroke-width="5.5"/>
+                      <path d="M59 31 C56 41, 54 49, 55 54 C56 57, 61 56, 66 50" stroke-width="5.2"/>
+                      <path d="M72 32 C70 40, 68 48, 67 55 M70 39 C75 31, 83 30, 84 36 C85 42, 82 49, 83 54 C84 57, 89 56, 94 50" stroke-width="5.2"/>
+                      <path d="M98 44 C107 44, 115 40, 116 34 C116 29, 108 29, 102 35 C96 41, 96 51, 102 55 C108 58, 115 55, 121 49" stroke-width="5.2"/>
+                      <path d="M134 15 C130 28, 127 42, 127 52 C127 57, 133 58, 140 52" stroke-width="5.4"/>
+                      <path d="M120 27 C129 25, 139 24, 147 23" stroke-width="4.4"/>
+                      <path d="M167 34 C162 29, 153 31, 148 39 C143 47, 145 55, 152 56 C158 56, 164 49, 168 38 C166 46, 166 53, 171 55 C177 57, 188 51, 202 44" stroke-width="5.2"/>
+                      <path d="M18 65 C68 59, 136 58, 196 61" stroke-width="3.2"/>
+                    </g>
+                    <circle cx="62" cy="19" r="3.6" fill="currentColor"/>
+                    <path d="M204 20 L207 26 L213 28 L207 30 L204 36 L201 30 L195 28 L201 26 Z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="footer-main_cols">
+                <div class="footer-col">
+                  <p class="footer-col_title">Navigation</p>
+                  <ul class="footer-list">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#ediciones">Editions</a></li>
+                    <li><a href="#sabores">Flavors</a></li>
+                    <li><a href="#equipo">Team</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-col">
+                  <p class="footer-col_title">Contact</p>
+                  <ul class="footer-list">
+                    <li>Keizersgracht 214, Amsterdam</li>
+                    <li>Torstraße 94, Berlin</li>
+                    <li><a href="mailto:hello@kineta.drink">hello@kineta.drink</a></li>
+                    <li><a href="tel:+31208842109">+31 20 884 2109</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-col footer-socials-col">
+                  <div>
+                    <p class="footer-col_title">Socials</p>
+                    <ul class="footer-list">
+                      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                      <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                      <li><a href="#intro">Kineta Run Club</a></li>
+                      <li><a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">Spotify · Lab Sessions</a></li>
+                    </ul>
+                  </div>
+
+                  <button type="button" class="scroll-top-btn" data-scroll-top aria-label="Scroll back to top">
+                    <span class="scroll-top-btn_bg" aria-hidden="true"></span>
+                    <svg class="scroll-top-btn_icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M9 15V3M4 8l5-5 5 5"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <p>&copy; <span data-current-year>2026</span> Kineta &middot; MIT Licensed</p>
+              <div class="footer-legal">
+                <button type="button" class="footer-solana-pill" data-solana-open aria-label="Support or Pay with Solana (SOL / USDC)">
+                  <svg class="footer-solana-pill_icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.5 16.5L7.2 13.8C7.4 13.6 7.7 13.5 8 13.5H19.5C20 13.5 20.2 14.1 19.9 14.4L17.2 17.1C17 17.3 16.7 17.4 16.4 17.4H4.9C4.4 17.4 4.2 16.8 4.5 16.5ZM17.2 9.9L19.9 12.6C20.2 12.9 20 13.5 19.5 13.5H8C7.7 13.5 7.4 13.4 7.2 13.2L4.5 10.5C4.2 10.2 4.4 9.6 4.9 9.6H16.4C16.7 9.6 17 9.7 17.2 9.9ZM4.5 6.9L7.2 4.2C7.4 4 7.7 3.9 8 3.9H19.5C20 3.9 20.2 4.5 19.9 4.8L17.2 7.5C17 7.7 16.7 7.8 16.4 7.8H4.9C4.4 7.8 4.2 7.2 4.5 6.9Z"/>
+                  </svg>
+                  <span>Support / Pay with Solana (SOL)</span>
+                </button>
+                <a href="#privacy" data-open-cookie-settings>Privacy Policy</a>
+                <a href="#terms" data-open-cookie-settings>Terms</a>
+                <span>Crafted by Kineta Lab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ======================================================================
+       GLOBAL INTERACTIVE OVERLAYS
+       ====================================================================== -->
+
+  <!-- Floating Pointer-Follower Marquee Pill -->
+  <div class="cursor-marquee" aria-hidden="true">
+    <div class="cursor-marquee_inner">
+      <div class="cursor-marquee__track">
+        <span class="cursor-marquee__text" data-cursor-marquee-label>View edition →</span>
+        <span class="cursor-marquee__text" data-cursor-marquee-label>View edition →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dismissible Cookie Consent Card -->
+  <aside id="cookie-consent" class="cookie-card" role="dialog" aria-label="Cookie preferences" hidden>
+    <div class="cookie-card_head">
+      <span class="cookie-card_badge">COOKIES &amp; PRIVACY</span>
+      <button type="button" class="cookie-card_close" data-cookie-close aria-label="Dismiss cookie notice">&times;</button>
+    </div>
+    <p class="cookie-card_title">Only the good stuff</p>
+    <p class="cookie-card_copy">We use essential cookies to keep things smooth and optional analytics to learn which flavors you crave.</p>
+    <div class="cookie-card_options">
+      <label class="cookie-option">
+        <input type="checkbox" checked disabled>
+        <span>Essential (always on)</span>
+      </label>
+      <label class="cookie-option">
+        <input type="checkbox" id="cookie-analytics" checked>
+        <span>Flavor &amp; performance analytics</span>
+      </label>
+      <label class="cookie-option">
+        <input type="checkbox" id="cookie-marketing">
+        <span>Limited drop alerts</span>
+      </label>
+    </div>
+    <div class="cookie-card_actions">
+      <button type="button" class="cookie-btn is-primary" data-cookie-save>Save choices</button>
+      <button type="button" class="cookie-btn is-ghost" data-cookie-reject>Essential only</button>
+    </div>
+  </aside>
+
+  <!-- Edition Detail Modal -->
+  <div id="edition-modal" class="kineta-modal" role="dialog" aria-modal="true" aria-labelledby="edition-modal-heading" hidden>
+    <div class="kineta-modal_backdrop" data-modal-close></div>
+    <div class="kineta-modal_panel" data-lenis-prevent>
+      <button type="button" class="kineta-modal_close" data-modal-close aria-label="Close edition details">&times;</button>
+      <div class="kineta-modal_grid">
+        <div class="kineta-modal_visual">
+          <img
+            id="edition-modal-img"
+            src="./src/assets/images/featured-night-drop.jpg"
+            alt="Kineta Night Drop limited edition photography"
+            loading="lazy"
+            decoding="async"
+          >
+          <span class="kineta-modal_batch" data-modal-batch>DROP 01 · 1,200 CANS</span>
+        </div>
+        <div class="kineta-modal_body">
+          <p class="eyebrow-s" data-modal-eyebrow>Limited Edition · Drop 01</p>
+          <h3 id="edition-modal-heading" class="kineta-modal_title" data-modal-title>Night Drop</h3>
+          <p class="paragraph-m" data-modal-subtitle>Smoked yerba mate, raw cacao &amp; bitter orange</p>
+          <div class="kineta-modal_specs" data-modal-specs></div>
+          <div>
+            <p class="kineta-modal_label">Tasting Notes</p>
+            <p class="paragraph-m" data-modal-notes></p>
+          </div>
+          <div class="kineta-modal_meters" data-modal-meters></div>
+          <button type="button" class="button-052" data-modal-add-pack>
+            <span class="button-052_arrow is-left" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9h12M10 4l5 5-5 5"/>
+              </svg>
+            </span>
+            <span class="button-052_label">ADD TO MY PACK</span>
+            <span class="button-052_arrow is-right" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9h12M10 4l5 5-5 5"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Pack Builder Drawer (6 / 12 Pack) -->
+  <div id="order-drawer" class="kineta-drawer" role="dialog" aria-modal="true" aria-labelledby="order-drawer-heading" hidden>
+    <div class="kineta-drawer_backdrop" data-drawer-close></div>
+    <div class="kineta-drawer_panel" data-lenis-prevent>
+      <button type="button" class="kineta-drawer_close" data-drawer-close aria-label="Close pack builder">&times;</button>
+
+      <div class="kineta-drawer_header">
+        <div>
+          <p class="kineta-drawer_kicker">SMALL-BATCH DISPATCH</p>
+          <h3 id="order-drawer-heading" class="kineta-drawer_title">BUILD YOUR PACK</h3>
+        </div>
+      </div>
+
+      <div data-drawer-builder>
+        <div class="pack-size-toggle" role="group" aria-label="Choose pack size">
+          <button type="button" class="pack-size-btn is-active" data-pack-size="6" aria-pressed="true">
+            <span class="pack-size-btn_num">6-PACK</span>
+            <span class="pack-size-btn_price">&euro;19.50</span>
+          </button>
+          <button type="button" class="pack-size-btn" data-pack-size="12" aria-pressed="false">
+            <span class="pack-size-btn_num">12-PACK</span>
+            <span class="pack-size-btn_price">&euro;36.00</span>
+          </button>
+        </div>
+
+        <div class="pack-progress">
+          <div class="pack-progress_meta">
+            <span data-pack-status>6 / 6 cans selected</span>
+            <strong data-pack-price>&euro;19.50</strong>
+          </div>
+          <div class="pack-progress_bar">
+            <div class="pack-progress_fill" data-pack-fill style="width: 100%"></div>
+          </div>
+        </div>
+
+        <div class="pack-flavors">
+          <div class="pack-flavor-row" data-flavor-key="volt-yuzu">
+            <span class="pack-flavor-swatch" style="--swatch: #00994D" aria-hidden="true"></span>
+            <div class="pack-flavor-info">
+              <strong>Volt Yuzu</strong>
+              <span>Japanese yuzu, guayusa &amp; sea salt</span>
+            </div>
+            <div class="pack-stepper">
+              <button type="button" class="pack-stepper_btn" data-step="-1" aria-label="Remove one Volt Yuzu">&minus;</button>
+              <span class="pack-stepper_val" data-flavor-count>2</span>
+              <button type="button" class="pack-stepper_btn" data-step="1" aria-label="Add one Volt Yuzu">+</button>
+            </div>
+          </div>
+
+          <div class="pack-flavor-row" data-flavor-key="berry-pulse">
+            <span class="pack-flavor-swatch" style="--swatch: #9D6BFF" aria-hidden="true"></span>
+            <div class="pack-flavor-info">
+              <strong>Berry Pulse</strong>
+              <span>Hibiscus, wild blackberry &amp; ginger</span>
+            </div>
+            <div class="pack-stepper">
+              <button type="button" class="pack-stepper_btn" data-step="-1" aria-label="Remove one Berry Pulse">&minus;</button>
+              <span class="pack-stepper_val" data-flavor-count>2</span>
+              <button type="button" class="pack-stepper_btn" data-step="1" aria-label="Add one Berry Pulse">+</button>
+            </div>
+          </div>
+
+          <div class="pack-flavor-row" data-flavor-key="solar-mango">
+            <span class="pack-flavor-swatch" style="--swatch: #FF3B1F" aria-hidden="true"></span>
+            <div class="pack-flavor-info">
+              <strong>Solar Mango</strong>
+              <span>Alphonso mango, lime &amp; chili kick</span>
+            </div>
+            <div class="pack-stepper">
+              <button type="button" class="pack-stepper_btn" data-step="-1" aria-label="Remove one Solar Mango">&minus;</button>
+              <span class="pack-stepper_val" data-flavor-count>2</span>
+              <button type="button" class="pack-stepper_btn" data-step="1" aria-label="Add one Solar Mango">+</button>
+            </div>
+          </div>
+        </div>
+
+        <form id="pack-order-form" class="pack-form" novalidate>
+          <div class="pack-field">
+            <label for="pack-name">Name</label>
+            <input id="pack-name" name="name" type="text" placeholder="Alex Rivera" required autocomplete="name">
+          </div>
+          <div class="pack-field">
+            <label for="pack-email">Email</label>
+            <input id="pack-email" name="email" type="email" placeholder="alex@studio.com" required autocomplete="email">
+          </div>
+          <div class="pack-field">
+            <label for="pack-city">Delivery City</label>
+            <input id="pack-city" name="city" type="text" placeholder="Amsterdam" required autocomplete="address-level2">
+          </div>
+          <p class="pack-form_error" data-pack-error hidden role="alert"></p>
+          <button type="submit" class="button-052">
+            <span class="button-052_arrow is-left" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9h12M10 4l5 5-5 5"/>
+              </svg>
+            </span>
+            <span class="button-052_label">RESERVE MY PACK</span>
+            <span class="button-052_arrow is-right" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9h12M10 4l5 5-5 5"/>
+              </svg>
+            </span>
+          </button>
+          <button type="button" class="solana-drawer-trigger" data-solana-open>
+            <svg class="solana-drawer-trigger_icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M4.5 16.5L7.2 13.8C7.4 13.6 7.7 13.5 8 13.5H19.5C20 13.5 20.2 14.1 19.9 14.4L17.2 17.1C17 17.3 16.7 17.4 16.4 17.4H4.9C4.4 17.4 4.2 16.8 4.5 16.5ZM17.2 9.9L19.9 12.6C20.2 12.9 20 13.5 19.5 13.5H8C7.7 13.5 7.4 13.4 7.2 13.2L4.5 10.5C4.2 10.2 4.4 9.6 4.9 9.6H16.4C16.7 9.6 17 9.7 17.2 9.9ZM4.5 6.9L7.2 4.2C7.4 4 7.7 3.9 8 3.9H19.5C20 3.9 20.2 4.5 19.9 4.8L17.2 7.5C17 7.7 16.7 7.8 16.4 7.8H4.9C4.4 7.8 4.2 7.2 4.5 6.9Z"/>
+            </svg>
+            <span>OR PAY INSTANTLY WITH SOLANA (SOL / USDC)</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="kineta-drawer_success" data-drawer-success hidden>
+        <span class="kineta-drawer_success-badge">BATCH RESERVED</span>
+        <h4 class="kineta-drawer_success-title">PACK IN MOTION</h4>
+        <p class="paragraph-m" data-success-summary></p>
+        <div class="kineta-drawer_receipt" data-success-receipt></div>
+        <div class="kineta-drawer_actions">
+          <button type="button" class="cookie-btn is-primary" data-solana-open>Pay with Solana (SOL / USDC)</button>
+          <button type="button" class="cookie-btn is-ghost" data-drawer-reset>Build another pack</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solana Pay & Open-Source Support Modal (SOL / USDC) -->
+  <div id="solana-modal" class="kineta-modal solana-modal" role="dialog" aria-modal="true" aria-labelledby="solana-modal-heading" hidden>
+    <div class="kineta-modal_backdrop" data-solana-close></div>
+    <div class="kineta-modal_panel solana-modal_panel" data-lenis-prevent>
+      <button type="button" class="kineta-modal_close" data-solana-close aria-label="Close Solana payment modal">&times;</button>
+      <div class="solana-modal_grid">
+        <div class="solana-modal_qr-col">
+          <span class="solana-modal_network-badge">SOLANA MAINNET &middot; SOL / USDC</span>
+          <div class="solana-modal_qr-box">
+            <img
+              class="solana-modal_qr-img"
+              src="src/assets/images/solana-pay-qr.png"
+              alt="Official Receive SOL QR Code for wallet 3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm"
+              width="240"
+              height="240"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <p class="solana-modal_qr-caption">Scan with Phantom, Solflare, Backpack, or any Solana Pay wallet</p>
+        </div>
+
+        <div class="solana-modal_body">
+          <p class="eyebrow-s">Web3 Checkout &amp; Open-Source Sponsorship</p>
+          <h3 id="solana-modal-heading" class="kineta-modal_title">PAY OR SUPPORT WITH SOLANA</h3>
+          <p class="paragraph-m">Send direct payments for small-batch Kineta orders or sponsor our open-source 60fps editorial web showcase via the Solana Network (SOL or USDC).</p>
+
+          <div class="solana-wallet-box">
+            <div class="solana-wallet-box_header">
+              <span class="kineta-modal_label">OFFICIAL SOLANA WALLET ADDRESS</span>
+              <span class="solana-wallet-box_tag">VERIFIED</span>
+            </div>
+            <div class="solana-wallet-box_row">
+              <code id="solana-wallet-code" class="solana-wallet-box_code" data-solana-address>3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm</code>
+              <button
+                type="button"
+                class="solana-copy-btn"
+                data-solana-copy="3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm"
+                aria-label="Copy Solana wallet address to clipboard"
+              >
+                <span data-solana-copy-label>COPY ADDRESS</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="solana-modal_actions">
+            <a
+              href="solana:3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm?label=Kineta%20Botanical%20Energy&message=Kineta%20Order%20or%20Open%20Source%20Sponsorship"
+              class="button-052 solana-pay-cta"
+            >
+              <span class="button-052_arrow is-left" aria-hidden="true">
+                <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9h12M10 4l5 5-5 5"/>
+                </svg>
+              </span>
+              <span class="button-052_label">OPEN IN SOLANA WALLET</span>
+              <span class="button-052_arrow is-right" aria-hidden="true">
+                <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9h12M10 4l5 5-5 5"/>
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="https://solscan.io/account/3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cookie-btn is-ghost solana-explorer-link"
+            >
+              Verify on Solscan &nearr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
