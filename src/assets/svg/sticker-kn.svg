@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-label="KN Monogram Sticker">
+  <defs>
+    <filter id="stickerShadow2" x="-12%" y="-12%" width="124%" height="128%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#111111" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#stickerShadow2)">
+    <!-- Scalloped / rounded badge die-cut border -->
+    <circle cx="70" cy="70" r="60" fill="#FFFFFF"/>
+    <!-- Electric Emerald core -->
+    <circle cx="70" cy="70" r="52" fill="#00994D" stroke="#111111" stroke-width="3"/>
+    <!-- Acid Chartreuse inner ring -->
+    <circle cx="70" cy="70" r="44" fill="none" stroke="#D8FF00" stroke-width="2.5"/>
+    <!-- Bold KN Monogram -->
+    <g fill="#D8FF00" stroke="#111111" stroke-width="2.2" stroke-linejoin="round">
+      <!-- K -->
+      <path d="M35 44 H47 V64 L62 44 H76 L58 67 L77 96 H62 L47 73 V96 H35 Z"/>
+      <!-- N -->
+      <path d="M74 44 H86 L99 72 V44 H110 V96 H98 L85 68 V96 H74 Z"/>
+    </g>
+    <!-- Micro kinetic dot -->
+    <circle cx="70" cy="107" r="3" fill="#D8FF00" stroke="#111111" stroke-width="1"/>
+  </g>
+</svg>

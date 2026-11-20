@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+bower_components/
+
+# macOS & OS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Desktop.ini
+
+# Logs & runtime data
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+
+# Build, cache & temporary outputs
+dist/
+build/
+.cache/
+.parcel-cache/
+.turbo/
+.temp/
+.tmp/
+tmp/
+coverage/
+
+# Editor & IDE directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

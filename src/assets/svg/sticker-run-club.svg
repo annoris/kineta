@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" role="img" aria-label="Kineta Run Club Sticker">
+  <defs>
+    <filter id="stickerShadow1" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#111111" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#stickerShadow1)">
+    <!-- White die-cut sticker outer border -->
+    <rect x="10" y="14" width="200" height="112" rx="56" fill="#FFFFFF"/>
+    <!-- Acid Chartreuse sticker fill -->
+    <rect x="17" y="21" width="186" height="98" rx="49" fill="#D8FF00" stroke="#111111" stroke-width="3"/>
+    <!-- Inner dashed racetrack ring -->
+    <rect x="25" y="29" width="170" height="82" rx="41" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <!-- Stylized bolt / kinetic bird emblem -->
+    <path d="M44 74 C49 58, 63 50, 78 52 L68 65 L83 66 L56 91 L62 74 Z" fill="#00994D" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/>
+    <!-- Typography -->
+    <text x="92" y="64" font-family="'Roboto Flex', 'Arial Narrow', Impact, sans-serif" font-weight="900" font-size="22" letter-spacing="0.5" fill="#111111">KINETA</text>
+    <text x="92" y="88" font-family="'Fraunces', Georgia, serif" font-weight="800" font-style="italic" font-size="18" fill="#111111">RUN CLUB</text>
+    <!-- Small star accents -->
+    <circle cx="177" cy="54" r="3.5" fill="#00994D"/>
+    <circle cx="184" cy="65" r="2.2" fill="#FFFFFF" stroke="#111111" stroke-width="1"/>
+  </g>
+</svg>
