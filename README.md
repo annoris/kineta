@@ -17,7 +17,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/annoris/kineta?style=for-the-badge&logo=github&color=00994D&labelColor=111111)](https://github.com/annoris/kineta/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/annoris/kineta?style=for-the-badge&logo=github&color=FF3B1F&labelColor=111111)](https://github.com/annoris/kineta/fork)
 [![Solana Pay: SOL / USDC](https://img.shields.io/badge/Solana_Pay-3HvUMC...fdzvBdm-9D6BFF?style=for-the-badge&logo=solana&logoColor=D8FF00)](./FUNDING.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-00994D.svg?style=for-the-badge)](./LICENSE)
+[![License: Proprietary / All Rights Reserved](https://img.shields.io/badge/License-Proprietary_%2F_All_Rights_Reserved-111111.svg?style=for-the-badge)](./LICENSE)
 [![Architecture: Zero Build](https://img.shields.io/badge/Zero_Build-Native_ES_Modules-D8FF00?style=for-the-badge&labelColor=111111)](./docs/ARCHITECTURE.md)
 [![Motion: GSAP + Lenis 60fps](https://img.shields.io/badge/Motion-GSAP_3.12_%2B_Lenis-FF3B1F?style=for-the-badge&labelColor=111111)](#4-pinned-3d-perspective-editions-stack-ediciones--dark-theme)
 
@@ -38,13 +38,13 @@
 ---
 
 > [!IMPORTANT]
-> ### ⭐ Why Star & Fork KINETA Right Now?
-> **KINETA** is a 100% open-source, production-ready **Awwwards-grade creative engineering blueprint** — zero Webpack/Vite bloat, zero `node_modules` lock-in, locked **60fps** GSAP + Lenis choreography, and native **Solana Pay (`SOL` / `USDC`)** checkout out of the box.
+> ### ⭐ Why Star KINETA Right Now?
+> **KINETA** is a production-ready **Awwwards-grade creative engineering showcase** — zero Webpack/Vite bloat, zero `node_modules` lock-in, locked **60fps** GSAP + Lenis choreography, and native **Solana Pay (`SOL` / `USDC`)** checkout out of the box.
 >
-> - ⭐ **[Star this repository](https://github.com/annoris/kineta/stargazers)** to bookmark the 13-stage GSAP + Lenis + Variable Font Proximity engine for your next agency pitch, DTC launch, or creative portfolio.
-> - 🍴 **[Fork KINETA in 1 click](https://github.com/annoris/kineta/fork)** and deploy your own zero-build 60fps showcase on GitHub Pages, Vercel, or Cloudflare Pages in **under 30 seconds**.
-> - 👀 **[Watch Releases & Join the Roadmap Thread](https://github.com/annoris/kineta/issues/1)** to vote on upcoming WebGL shaders, custom audio-reactive motion hooks, and Solana Pay receipt NFTs.
-> - 💎 **[Sponsor via Solana (`3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm`)](./FUNDING.md)** to unlock **Commercial Attribution Waivers**, featured studio logos in this README, and 1-on-1 motion architecture reviews!
+> - ⭐ **[Star this repository](https://github.com/annoris/kineta/stargazers)** to bookmark the 13-stage GSAP + Lenis + Variable Font Proximity showcase and architectural documentation.
+> - 🚀 **[Explore the Live 60fps Showcase](https://annoris.github.io/kineta)** directly in your browser to experience every motion system, 3D stack, and overlay.
+> - 👀 **[Watch Releases & Join the Roadmap Thread](https://github.com/annoris/kineta/issues/1)** to follow upcoming WebGL shaders, custom audio-reactive motion hooks, and Solana Pay receipt features.
+> - 💎 **[Sponsor via Solana (`3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm`)](./FUNDING.md)** to support ongoing 60fps creative engineering R&D!
 
 ---
 
@@ -52,7 +52,7 @@
 
 > **"What happens when you strip away 400MB of `node_modules`, Webpack/Vite bundlers, and sluggish CSS blurs — and engineer an Awwwards-grade editorial experience directly on native ES Modules, GPU-composited transforms, variable font proximity math, and instant Solana Pay?"**
 >
-> **Answer: KINETA.** Locked **60fps** from the very first frame, **0ms preloader block**, crisp **`0px` brutalist geometry**, and **100% open-source**.
+> **Answer: KINETA.** Locked **60fps** from the very first frame, **0ms preloader block**, crisp **`0px` brutalist geometry**, and **Proprietary / All Rights Reserved** architecture.
 
 ---
 
@@ -92,7 +92,7 @@ Modern creative agency and DTC beverage websites often suffer from two extremes:
 - [💎 Support & Web3 Sponsorship (Solana — SOL / USDC)](#-support--web3-sponsorship-solana--sol--usdc)
 - [📣 Viral Launch Kit (X, Hacker News, Reddit, Product Hunt)](#-viral-launch-kit-x-hacker-news-reddit-product-hunt)
 - [📈 Star History & Community Showcase](#-star-history--community-showcase)
-- [📜 Open-Source Governance & License](#-open-source-governance--license)
+- [📜 Governance & Proprietary License](#-governance--proprietary-license)
 
 ---
 
@@ -359,7 +359,7 @@ sequenceDiagram
 
 ## 🎨 Signature Editorial Palette & Fluid Typography System
 
-**KINETA** alternates between warm tactile paper and deep matte obsidian surfaces, punctuated by four high-voltage botanical accent tokens defined in `src/styles/tokens.css` ([Private Source Vault — Unlock via Solana](./SOURCE_ACCESS.md)):
+**KINETA** alternates between warm tactile paper and deep matte obsidian surfaces, punctuated by four high-voltage botanical accent tokens defined in `src/styles/tokens.css`:
 
 | CSS Custom Property | Token Role | Color Name | Hex | Preview Swatch |
 | :--- | :--- | :--- | :--- | :---: |
@@ -394,7 +394,7 @@ kineta/
 ├── package.json                                  # Project metadata & zero-config dev/preview scripts
 ├── README.md                                     # Complete visual documentation & architecture guide
 ├── VIRAL_LAUNCH_KIT.md                           # Ready-to-post launch threads for X, HN, Reddit & PH
-├── LICENSE                                       # MIT License with commercial attribution notice
+├── LICENSE                                       # Proprietary / All Rights Reserved License
 ├── CONTRIBUTING.md                               # Zero-build contribution & 60fps performance guide
 ├── CODE_OF_CONDUCT.md                            # Contributor Covenant v2.1 community standards
 ├── SECURITY.md                                   # Security policy & official Solana wallet verification
@@ -465,19 +465,15 @@ kineta/
 ## 🚀 Quick Start & Zero-Build Deployment
 
 > [!IMPORTANT]
-> **Solana-Gated Sponsorware Architecture (`annoris/kineta-pro-source`):**
+> **Proprietary Source Code — All Rights Reserved:**
 > - **Live 60FPS Flagship Showcase:** Anyone can experience the live locked-60fps production application at **[https://annoris.github.io/kineta/](https://annoris.github.io/kineta/)** and inspect all 16 Retina UI captures, 12 studio photographs, 8 vector stickers, design token tables, and Mermaid system diagrams right here in this public showcase repository.
-> - **Full Editable Source Code Vault:** The complete, unminified, editable source code (`index.html`, `src/scripts/main.js`, `src/scripts/animations.js`, `src/scripts/interactive.js`, `src/scripts/canvas-art.js`, `src/data/brandData.js`, and `src/styles/*.css`) is hosted inside the **Private Source Vault (`annoris/kineta-pro-source`)** and unlocked immediately upon contributing via **Solana Mainnet (`3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm`)** and submitting a **[🔓 Solana Source Code Unlock Request](https://github.com/annoris/kineta/issues/new?template=source_unlock_request.md)**. See [`SOURCE_ACCESS.md`](./SOURCE_ACCESS.md) and [`PAYMENT.md`](./PAYMENT.md) for instant unlock instructions.
+> - **Proprietary Source Code:** The underlying application source code (`index.html`, `src/scripts/`, `src/data/`, and `src/styles/`) is proprietary software (`All Rights Reserved`). Commercial licensing and private deployment access are available exclusively through a direct written agreement with the author. See [`LICENSE`](./LICENSE) for full terms.
 
-Because **KINETA** uses native ES Modules (`<script type="module">`) and standard CSS custom properties, once your GitHub account has been invited to **`annoris/kineta-pro-source`**, there is **nothing to install or compile**.
+Because **KINETA** uses native ES Modules (`<script type="module">`) and standard CSS custom properties, with authorized source access there is **nothing to install or compile**.
 
-### 1. Clone the Private Source Vault & Run Locally in 10 Seconds
+### 1. Run Locally (Authorized Source Access)
 
 ```bash
-# Clone the full editable source vault (after Solana unlock verification)
-git clone https://github.com/annoris/kineta-pro-source.git
-cd kineta-pro-source
-
 # Option A: Start with Python 3 built-in HTTP server (port 4173)
 npm run dev
 
@@ -569,16 +565,14 @@ We actively celebrate every creative developer, motion designer, and Web3 builde
 
 ---
 
-## 📜 Open-Source Governance & License
+## 📜 Governance & Proprietary License
 
-- **[`LICENSE`](./LICENSE)** — Released under the **Commercial & Sponsorware Source-Gated License (On-Chain Solana Treasury Edition)**.
-- **[`SOURCE_ACCESS.md`](./SOURCE_ACCESS.md)** — 3-step guide to unlock the private `annoris/kineta-pro-source` repository via Solana.
-- **[`PAYMENT.md`](./PAYMENT.md)** — Commercial white-label licensing tiers, QR code, and Solana CLI instructions (`3HvUMCUSSHEdtA35UuD4J7mbgpTxJ7LgT2X7GfdzvBdm`).
+- **[`LICENSE`](./LICENSE)** — Released under the **Proprietary / All Rights Reserved License** (commercial licensing available exclusively via direct agreement with the author).
 - **[`SPONSORS.md`](./SPONSORS.md)** — Hall of Patrons and institutional sponsors.
 - **[`CONTRIBUTING.md`](./CONTRIBUTING.md)** — Zero-build engineering principles, 60fps frame-budget rules, and PR workflow.
 - **[`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md)** — Contributor Covenant v2.1 standards.
 - **[`SECURITY.md`](./SECURITY.md)** — Vulnerability reporting & canonical Solana wallet verification.
-- **[`FUNDING.md`](./FUNDING.md)** — Web3 Solana sponsorship instructions and commercial backing tiers.
+- **[`FUNDING.md`](./FUNDING.md)** — Web3 Solana sponsorship instructions.
 
 ---
 
